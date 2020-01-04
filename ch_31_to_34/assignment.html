@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userName = prompt("Enter Your Name")
+        var dayOfBirth = prompt("Enter Your Date of Birth")
+        var monthOfBirth = prompt("Enter You Month of Birth")
+        var yearOfBirth = prompt("Enter Your Year of Birth")
+        var todaysDate = new Date()
+        var currentHour = todaysDate.getHours()
+        //console.log(currentHour)
+        if(currentHour >=6 && currentHour<12){
+            console.log("Hello "+userName+", Good Morning")
+        }
+        else if(currentHour >=12 && currentHour<17){
+            console.log("Hello "+userName+", Good Afternoon")
+        }
+        else if(currentHour >17 && currentHour<19){
+            console.log("Hello "+userName+", Good Evening")
+        }
+        else{
+            console.log("Hello "+userName+", Good Night")
+        }
+        var dateOfBirth = new Date(dayOfBirth + " " + monthOfBirth + "," + yearOfBirth)
+        console.log(dateOfBirth)
+        console.log("You are " + ((todaysDate.getFullYear()-1) - yearOfBirth) + " years " + ((todaysDate.getMonth()+12) - dateOfBirth.getMonth()) + " Months " +
+        ((dateOfBirth.getDay()+30) - todaysDate.getDay()) + " Days " + (todaysDate.getHours() - dateOfBirth.getHours() + " Hours " +
+        (todaysDate.getMinutes() - dateOfBirth.getMinutes() + " Minutes " + (todaysDate.getSeconds() - dateOfBirth.getSeconds() + " Seconds old"))));
+         var Years = (todaysDate.getFullYear() - dateOfBirth.getFullYear());
+         console.log("Your Age in Days : " + (Years * 365));
+        if(todaysDate.getDate() === dateOfBirth.getDate() && todaysDate.getMonth() === dateOfBirth.getMonth()){
+            console.log("Happy birthday "+userName)
+        }
+        else{
+            console.log("How much time left in next Birthday : " + (((todaysDate.getMonth()+12) - dateOfBirth.getMonth()) - 12) * 30 + " Days " + (todaysDate.getHours() - dateOfBirth.getHours() +
+        " Hours " + (todaysDate.getMinutes() - dateOfBirth.getMinutes() + " Minutes " + (todaysDate.getSeconds() - dateOfBirth.getSeconds() + " Seconds "))));
+
+}
+    </script>
+</body>
+</html>

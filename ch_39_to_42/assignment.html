@@ -1,0 +1,45 @@
+<html>
+    <head>
+            <script>
+                    var math = parseInt( prompt("Enter Mathematics Marks"))
+                    var phy = parseInt(prompt("Enter Physics Marks"))
+                    var eng = parseInt(prompt("Enter English Marks"))
+                    var urdu = parseInt(prompt("Enter Urdu Marks"))
+                    var isl = parseInt(prompt("Enter Islamiat Marks"))
+                    var total = math+phy+eng+urdu+isl
+                    var per = (total / 500) *100
+                    var grade
+                    switch (true) {
+                        case (per <= 100 && per >=90):
+                            grade = "A+"
+                            break;
+                        case (per <= 89 && per >=75):
+                            grade = "A"
+                            break
+                        case (per <= 74 && per >=60):
+                            grade = "B"
+                            break;
+                        case (per <= 59 && per >=45):
+                            grade = "C"
+                            break
+                        case (per <= 44 && per >=30):
+                            grade = "D"
+                            break
+                        default:
+                            grade = "F"
+                            break;
+                    }
+                    console.log(grade)
+                    switch (grade) {
+                        case "F":
+                        alert("Mark Sheet\n 1. Mathematics = "+math+"\n 2. Physics = "+phy+"\n 3. English = "+eng+"\n 4. Urdu = "+urdu+"\n 5. Islamiat = "+isl+"\n Total Marks : "+total+" /500\n Percentage : "+per.toFixed(1)+"%\n You are fail as you got "+grade)
+                        break;
+                        default:
+                        alert("Mark Sheet\n 1. Mathematics = "+math+"\n 2. Physics = "+phy+"\n 3. English = "+eng+"\n 4. Urdu = "+urdu+"\n 5. Islamiat = "+isl+"\n Total Marks : "+total+" /500\n Percentage : "+per.toFixed(1)+"%\n Congratulation! you got "+grade)
+                            break;
+                    }
+                </script>
+                
+    </body>
+    
+</html>

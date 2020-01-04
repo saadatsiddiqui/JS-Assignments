@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capitilize First Charactor Of A String</title>
+</head>
+<body>
+    <script>
+        var text = prompt("Please your text")
+        var words = text.split(" ")
+        newText = ""
+        var firstChar
+        var restChar 
+        for (var i = 0; i < words.length; i++){
+            firstChar = words[i].charAt(0).toUpperCase();
+            restChar = words[i].slice(1).toLowerCase();
+            words.splice(i,1,firstChar +restChar);
+            newText = newText.concat(words[i]," ");
+        }
+        console.log(newText);
+    </script>
+</body>
+</html>

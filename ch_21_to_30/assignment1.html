@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            var num = Number(prompt("Please enter a number with decimal value"))
+            num = Math.ceil(num);
+            alert("Your number after conversion " + num)
+            var textString=prompt("Enter your text")
+            alert("Your Original Text is " +textString)
+            var newString = textString.slice(0,num)
+           // alert("Your text after slicing is "+newString)
+            var revString = ""
+            for(i=num-1;i>=0;i--){
+                if(newString[i] !== " "){
+                    revString += newString[i]
+                }
+                
+            }
+            alert("Reversed text upto entered value is "+revString)
+        </script>
+    </head>
+</html>
